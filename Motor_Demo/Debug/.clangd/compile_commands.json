@@ -1,0 +1,97 @@
+[
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/main.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\"",
+      "file"      : "E:/Motor_Demo/Motor_Demo/DSP2833x_libraries/DSP2833x_ADC_cal.asm"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/DSP2833x_libraries/DSP2833x_Adc.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\"",
+      "file"      : "E:/Motor_Demo/Motor_Demo/DSP2833x_libraries/DSP2833x_CodeStartBranch.asm"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/DSP2833x_libraries/DSP2833x_CpuTimers.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/DSP2833x_libraries/DSP2833x_DefaultIsr.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/DSP2833x_libraries/DSP2833x_EPwm.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/DSP2833x_libraries/DSP2833x_GlobalVariableDefs.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/DSP2833x_libraries/DSP2833x_Gpio.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/DSP2833x_libraries/DSP2833x_PieCtrl.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/DSP2833x_libraries/DSP2833x_PieVect.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/DSP2833x_libraries/DSP2833x_Sci.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/DSP2833x_libraries/DSP2833x_SysCtrl.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/DSP2833x_libraries/DSP2833x_Xintf.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\"",
+      "file"      : "E:/Motor_Demo/Motor_Demo/DSP2833x_libraries/DSP2833x_usDelay.asm"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/Include/APP/APP_common/Timer0.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/Include/APP/APP_common/Led.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/Include/APP/APP_common/Relay.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/Include/APP/APP_common/Exti.c"
+   }
+]
