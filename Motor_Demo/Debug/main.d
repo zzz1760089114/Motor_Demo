@@ -30,6 +30,7 @@ main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Relay.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Exti.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Led.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Timer0.h
+main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/ADC.h
 
 ../main.c:
 
@@ -90,4 +91,6 @@ E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Exti.h:
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Led.h:
 
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Timer0.h:
+
+E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/ADC.h:
 

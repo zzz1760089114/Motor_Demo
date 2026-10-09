@@ -93,5 +93,10 @@
       "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
       "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
       "file"      : "E:/Motor_Demo/Motor_Demo/Include/APP/APP_common/Exti.c"
+   },
+   {
+      "directory" : "E:/Motor_Demo/Motor_Demo/Debug",
+      "command"   : "clang++ -I\"E:/Motor_Demo/Motor_Demo\" -I\"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include\" -I\"E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers\" -I\"E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common\" -xc",
+      "file"      : "E:/Motor_Demo/Motor_Demo/Include/APP/APP_common/ADC.c"
    }
 ]

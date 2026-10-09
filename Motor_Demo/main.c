@@ -10,10 +10,13 @@
 #include "Exti.h"
 #include "Led.h"
 #include "Timer0.h"
+#include "ADC.h"
 
 void main()
 {
-	int i=0;
+	//int i=0;
+
+	float ADC_Vol;
 
 	InitSysCtrl();
 
@@ -23,17 +26,15 @@ void main()
 	InitPieVectTable();
 
 	Relay_Init();
-//  EXTI1_Init();
+    EXTI1_Init();
 	Led_Init();
 	Timer0_Init(150, 500000);
+	ADC_Init();
 
 	while(1)
 	{
-		i++;
-		if(i%2000==0)
-		{
-			Led1_Toggle;
-		}
-		DELAY_US(100);
+		ADC_Vol = (float)Read_ADC_Value()*3.0/4095;
+		//SMG_DisplayFloat(adc_vol,2);
+		//SMG_DisplayInt(Read_ADCValue());
 	}
 }

@@ -25,6 +25,7 @@ ORDERED_OBJS += \
 "./DSP2833x_libraries/DSP2833x_SysCtrl.obj" \
 "./DSP2833x_libraries/DSP2833x_Xintf.obj" \
 "./DSP2833x_libraries/DSP2833x_usDelay.obj" \
+"./Include/APP/APP_common/ADC.obj" \
 "./Include/APP/APP_common/Exti.obj" \
 "./Include/APP/APP_common/Led.obj" \
 "./Include/APP/APP_common/Relay.obj" \
@@ -158,8 +159,8 @@ Motor_Demo.out: $(OBJS) $(CMD_SRCS) $(LIB_SRCS) $(GEN_CMDS)
 # Other Targets
 clean:
 	-$(RM) $(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" "DSP2833x_libraries\DSP2833x_ADC_cal.obj" "DSP2833x_libraries\DSP2833x_Adc.obj" "DSP2833x_libraries\DSP2833x_CodeStartBranch.obj" "DSP2833x_libraries\DSP2833x_CpuTimers.obj" "DSP2833x_libraries\DSP2833x_DefaultIsr.obj" "DSP2833x_libraries\DSP2833x_EPwm.obj" "DSP2833x_libraries\DSP2833x_GlobalVariableDefs.obj" "DSP2833x_libraries\DSP2833x_Gpio.obj" "DSP2833x_libraries\DSP2833x_PieCtrl.obj" "DSP2833x_libraries\DSP2833x_PieVect.obj" "DSP2833x_libraries\DSP2833x_Sci.obj" "DSP2833x_libraries\DSP2833x_SysCtrl.obj" "DSP2833x_libraries\DSP2833x_Xintf.obj" "DSP2833x_libraries\DSP2833x_usDelay.obj" "Include\APP\APP_common\Exti.obj" "Include\APP\APP_common\Led.obj" "Include\APP\APP_common\Relay.obj" "Include\APP\APP_common\Timer0.obj" 
-	-$(RM) "main.d" "DSP2833x_libraries\DSP2833x_Adc.d" "DSP2833x_libraries\DSP2833x_CpuTimers.d" "DSP2833x_libraries\DSP2833x_DefaultIsr.d" "DSP2833x_libraries\DSP2833x_EPwm.d" "DSP2833x_libraries\DSP2833x_GlobalVariableDefs.d" "DSP2833x_libraries\DSP2833x_Gpio.d" "DSP2833x_libraries\DSP2833x_PieCtrl.d" "DSP2833x_libraries\DSP2833x_PieVect.d" "DSP2833x_libraries\DSP2833x_Sci.d" "DSP2833x_libraries\DSP2833x_SysCtrl.d" "DSP2833x_libraries\DSP2833x_Xintf.d" "Include\APP\APP_common\Exti.d" "Include\APP\APP_common\Led.d" "Include\APP\APP_common\Relay.d" "Include\APP\APP_common\Timer0.d" 
+	-$(RM) "main.obj" "DSP2833x_libraries\DSP2833x_ADC_cal.obj" "DSP2833x_libraries\DSP2833x_Adc.obj" "DSP2833x_libraries\DSP2833x_CodeStartBranch.obj" "DSP2833x_libraries\DSP2833x_CpuTimers.obj" "DSP2833x_libraries\DSP2833x_DefaultIsr.obj" "DSP2833x_libraries\DSP2833x_EPwm.obj" "DSP2833x_libraries\DSP2833x_GlobalVariableDefs.obj" "DSP2833x_libraries\DSP2833x_Gpio.obj" "DSP2833x_libraries\DSP2833x_PieCtrl.obj" "DSP2833x_libraries\DSP2833x_PieVect.obj" "DSP2833x_libraries\DSP2833x_Sci.obj" "DSP2833x_libraries\DSP2833x_SysCtrl.obj" "DSP2833x_libraries\DSP2833x_Xintf.obj" "DSP2833x_libraries\DSP2833x_usDelay.obj" "Include\APP\APP_common\ADC.obj" "Include\APP\APP_common\Exti.obj" "Include\APP\APP_common\Led.obj" "Include\APP\APP_common\Relay.obj" "Include\APP\APP_common\Timer0.obj" 
+	-$(RM) "main.d" "DSP2833x_libraries\DSP2833x_Adc.d" "DSP2833x_libraries\DSP2833x_CpuTimers.d" "DSP2833x_libraries\DSP2833x_DefaultIsr.d" "DSP2833x_libraries\DSP2833x_EPwm.d" "DSP2833x_libraries\DSP2833x_GlobalVariableDefs.d" "DSP2833x_libraries\DSP2833x_Gpio.d" "DSP2833x_libraries\DSP2833x_PieCtrl.d" "DSP2833x_libraries\DSP2833x_PieVect.d" "DSP2833x_libraries\DSP2833x_Sci.d" "DSP2833x_libraries\DSP2833x_SysCtrl.d" "DSP2833x_libraries\DSP2833x_Xintf.d" "Include\APP\APP_common\ADC.d" "Include\APP\APP_common\Exti.d" "Include\APP\APP_common\Led.d" "Include\APP\APP_common\Relay.d" "Include\APP\APP_common\Timer0.d" 
 	-$(RM) "DSP2833x_libraries\DSP2833x_ADC_cal.d" "DSP2833x_libraries\DSP2833x_CodeStartBranch.d" "DSP2833x_libraries\DSP2833x_usDelay.d" 
 	-@echo ' '
 

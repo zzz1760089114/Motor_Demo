@@ -13,6 +13,7 @@
 "./DSP2833x_libraries/DSP2833x_SysCtrl.obj"
 "./DSP2833x_libraries/DSP2833x_Xintf.obj"
 "./DSP2833x_libraries/DSP2833x_usDelay.obj"
+"./Include/APP/APP_common/ADC.obj"
 "./Include/APP/APP_common/Exti.obj"
 "./Include/APP/APP_common/Led.obj"
 "./Include/APP/APP_common/Relay.obj"
