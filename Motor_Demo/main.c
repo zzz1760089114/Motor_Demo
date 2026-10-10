@@ -11,6 +11,7 @@
 #include "Led.h"
 #include "Timer0.h"
 #include "ADC.h"
+#include "LCD9648.h"
 
 void main()
 {
@@ -26,14 +27,19 @@ void main()
 	InitPieVectTable();
 
 	Relay_Init();
-    EXTI1_Init();
+    //EXTI1_Init();
 	Led_Init();
-	Timer0_Init(150, 500000);
+	Timer0_Init(150, 100000);
 	ADC_Init();
+	LCD9648_Init();
+	//LCD9648_Fill(0xAAU);   /* Power-on test: alternating horizontal lines. */
 
 	while(1)
 	{
 		ADC_Vol = (float)Read_ADC_Value()*3.0/4095;
+		LCD9648_ShowString(0U, 0U, "Motor Demo");
+		LCD9648_ShowString(0U, 2U, "Voltage:");
+		LCD9648_ShowDecimal(48U, 2U, ADC_Vol, 1U, 2U);
 		//SMG_DisplayFloat(adc_vol,2);
 		//SMG_DisplayInt(Read_ADCValue());
 	}
