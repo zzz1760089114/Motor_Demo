@@ -23,7 +23,7 @@ void EXTI1_Init(void)
     EDIS;
     
     EALLOW;
-    GpioIntRegs.GPIOXINT1SEL.bit.GPIOSEL = 12;
+    GpioIntRegs.GPIOXINT1SEL.bit.GPIOSEL = 12;  //GPIO12 选择为外部中断 XINT1 的输入源
     EDIS;
 
     EALLOW;

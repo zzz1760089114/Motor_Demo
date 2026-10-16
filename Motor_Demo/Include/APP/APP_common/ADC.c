@@ -11,7 +11,7 @@ void ADC_Init(void)
 
     AdcRegs.ADCTRL3.bit.ADCCLKPS = ADC_CKPS;    //0x1;1
     AdcRegs.ADCTRL1.bit.CPS = 0;
-    AdcRegs.ADCTRL1.bit.ACQ_PS = ADC_SHCLK;     //0xf;15
+    AdcRegs.ADCTRL1.bit.ACQ_PS = ADC_SHCLK;     //采样时间：0xf;15个时钟周期
     AdcRegs.ADCTRL1.bit.SEQ_CASC = 1;
     AdcRegs.ADCTRL1.bit.CONT_RUN = 1;
     
@@ -19,6 +19,10 @@ void ADC_Init(void)
 
     AdcRegs.ADCMAXCONV.bit.MAX_CONV1 = 0x0;
     AdcRegs.ADCCHSELSEQ1.bit.CONV00 = 0x0;
+
+    /*AdcRegs.ADCCHSELSEQ1.bit.CONV00 = 0;  // 第1次测 A0
+      AdcRegs.ADCCHSELSEQ1.bit.CONV01 = 1;  // 第2次测 A1
+      AdcRegs.ADCCHSELSEQ1.bit.CONV02 = 8;  // 第3次测 B0*/
 }
 
 Uint16 Read_ADC_Value(void)

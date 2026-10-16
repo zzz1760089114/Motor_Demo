@@ -26,6 +26,7 @@ C_SRCS += \
 ../DSP2833x_libraries/DSP2833x_PieCtrl.c \
 ../DSP2833x_libraries/DSP2833x_PieVect.c \
 ../DSP2833x_libraries/DSP2833x_Sci.c \
+../DSP2833x_libraries/DSP2833x_Spi.c \
 ../DSP2833x_libraries/DSP2833x_SysCtrl.c \
 ../DSP2833x_libraries/DSP2833x_Xintf.c 
 
@@ -39,6 +40,7 @@ C_DEPS += \
 ./DSP2833x_libraries/DSP2833x_PieCtrl.d \
 ./DSP2833x_libraries/DSP2833x_PieVect.d \
 ./DSP2833x_libraries/DSP2833x_Sci.d \
+./DSP2833x_libraries/DSP2833x_Spi.d \
 ./DSP2833x_libraries/DSP2833x_SysCtrl.d \
 ./DSP2833x_libraries/DSP2833x_Xintf.d 
 
@@ -54,6 +56,7 @@ OBJS += \
 ./DSP2833x_libraries/DSP2833x_PieCtrl.obj \
 ./DSP2833x_libraries/DSP2833x_PieVect.obj \
 ./DSP2833x_libraries/DSP2833x_Sci.obj \
+./DSP2833x_libraries/DSP2833x_Spi.obj \
 ./DSP2833x_libraries/DSP2833x_SysCtrl.obj \
 ./DSP2833x_libraries/DSP2833x_Xintf.obj \
 ./DSP2833x_libraries/DSP2833x_usDelay.obj 
@@ -75,6 +78,7 @@ OBJS__QUOTED += \
 "DSP2833x_libraries\DSP2833x_PieCtrl.obj" \
 "DSP2833x_libraries\DSP2833x_PieVect.obj" \
 "DSP2833x_libraries\DSP2833x_Sci.obj" \
+"DSP2833x_libraries\DSP2833x_Spi.obj" \
 "DSP2833x_libraries\DSP2833x_SysCtrl.obj" \
 "DSP2833x_libraries\DSP2833x_Xintf.obj" \
 "DSP2833x_libraries\DSP2833x_usDelay.obj" 
@@ -89,6 +93,7 @@ C_DEPS__QUOTED += \
 "DSP2833x_libraries\DSP2833x_PieCtrl.d" \
 "DSP2833x_libraries\DSP2833x_PieVect.d" \
 "DSP2833x_libraries\DSP2833x_Sci.d" \
+"DSP2833x_libraries\DSP2833x_Spi.d" \
 "DSP2833x_libraries\DSP2833x_SysCtrl.d" \
 "DSP2833x_libraries\DSP2833x_Xintf.d" 
 
@@ -112,6 +117,7 @@ C_SRCS__QUOTED += \
 "../DSP2833x_libraries/DSP2833x_PieCtrl.c" \
 "../DSP2833x_libraries/DSP2833x_PieVect.c" \
 "../DSP2833x_libraries/DSP2833x_Sci.c" \
+"../DSP2833x_libraries/DSP2833x_Spi.c" \
 "../DSP2833x_libraries/DSP2833x_SysCtrl.c" \
 "../DSP2833x_libraries/DSP2833x_Xintf.c" 
 

@@ -12,10 +12,14 @@
 #include "Timer0.h"
 #include "ADC.h"
 #include "LCD9648.h"
+#include "SPI.h"
 
-void main()
+void main(void)
 {
 	//int i=0;
+	Uint16 Tx_Data = 0;
+	Uint16 Rx_Data = 0;
+	//char str[40];
 
 	float ADC_Vol;
 
@@ -32,7 +36,10 @@ void main()
 	Timer0_Init(150, 100000);
 	ADC_Init();
 	LCD9648_Init();
-	//LCD9648_Fill(0xAAU);   /* Power-on test: alternating horizontal lines. */
+	SPIA_Init();
+
+	Tx_Data = 30;
+	Rx_Data = SPI_Transfer8(Tx_Data);
 
 	while(1)
 	{
@@ -40,7 +47,6 @@ void main()
 		LCD9648_ShowString(0U, 0U, "Motor Demo");
 		LCD9648_ShowString(0U, 2U, "Voltage:");
 		LCD9648_ShowDecimal(48U, 2U, ADC_Vol, 1U, 2U);
-		//SMG_DisplayFloat(adc_vol,2);
-		//SMG_DisplayInt(Read_ADCValue());
+		LCD9648_ShowNumber(0U, 4U, Rx_Data, 10U);
 	}
 }

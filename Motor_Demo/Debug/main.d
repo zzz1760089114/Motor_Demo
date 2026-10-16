@@ -32,6 +32,7 @@ main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Led.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Timer0.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/ADC.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/LCD9648.h
+main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SPI.h
 
 ../main.c:
 
@@ -96,4 +97,6 @@ E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Timer0.h:
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/ADC.h:
 
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/LCD9648.h:
+
+E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SPI.h:
 
