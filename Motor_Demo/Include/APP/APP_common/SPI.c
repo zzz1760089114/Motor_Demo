@@ -11,7 +11,7 @@ void SPIA_EnableFIFO_Init(void)
     SpiaRegs.SPICCR.all = 0;
     SpiaRegs.SPICTL.all = 0;
 
-    SpiaRegs.SPICCR.bit.SPICHAR = 7;      // 每个数据单元8位
+    SpiaRegs.SPICCR.bit.SPICHAR = 15;     // 每个数据单元16位
     SpiaRegs.SPICCR.bit.CLKPOLARITY = 0;   // 时钟空闲低
     SpiaRegs.SPICCR.bit.SPILBK = 1;        // 内部回环测试
 
@@ -34,30 +34,14 @@ void SPIA_FIFO_Init(void)
     SysCtrlRegs.PCLKCR0.bit.SPIAENCLK = 1;
     EDIS;
     
-    EALLOW;
-    GpioCtrlRegs.GPBPUD.bit.GPIO54 = 0;   // Enable pull-up on GPIO54 (SPISIMOA)
-    GpioCtrlRegs.GPBPUD.bit.GPIO55 = 0;   // Enable pull-up on GPIO55 (SPISOMIA)
-    GpioCtrlRegs.GPBPUD.bit.GPIO56 = 0;   // Enable pull-up on GPIO56 (SPICLKA)
-    GpioCtrlRegs.GPBPUD.bit.GPIO57 = 0;   // Enable pull-up on GPIO57 (SPISTEA)
-
-    GpioCtrlRegs.GPBQSEL2.bit.GPIO54 = 3; // Asynch input GPIO54 (SPISIMOA)
-    GpioCtrlRegs.GPBQSEL2.bit.GPIO55 = 3; // Asynch input GPIO55 (SPISOMIA)
-    GpioCtrlRegs.GPBQSEL2.bit.GPIO56 = 3; // Asynch input GPIO56 (SPICLKA)
-    GpioCtrlRegs.GPBQSEL2.bit.GPIO57 = 3; // Asynch input GPIO57 (SPISTEA)
-
-    GpioCtrlRegs.GPBMUX2.bit.GPIO54 = 1; // Configure GPIO54 as SPISIMOA
-    GpioCtrlRegs.GPBMUX2.bit.GPIO55 = 1; // Configure GPIO55 as SPISOMIA
-    GpioCtrlRegs.GPBMUX2.bit.GPIO56 = 1; // Configure GPIO56 as SPICLKA
-    GpioCtrlRegs.GPBMUX2.bit.GPIO57 = 1; // Configure GPIO57 as SPISTEA
-
-    EDIS;
+    InitSpiGpio();
 
     //SPI保持复位
     SpiaRegs.SPICCR.all = 0;
     SpiaRegs.SPICTL.all = 0;
 
     //基本通信参数
-    SpiaRegs.SPICCR.bit.SPICHAR = 7;       // 8位
+    SpiaRegs.SPICCR.bit.SPICHAR = 15;      // 16位
     SpiaRegs.SPICCR.bit.CLKPOLARITY = 0;   // 时钟空闲低
     SpiaRegs.SPICCR.bit.SPILBK = 1;        // 内部回环
 
@@ -96,15 +80,15 @@ void SPIA_FIFO_Init(void)
 }
 
 
-Uint16 SPI_Transfer8(Uint16 tx)
+Uint16 SPI_Transfer16(Uint16 tx)
 {
     // 等待发送缓冲区有空位
     while (SpiaRegs.SPISTS.bit.BUFFULL_FLAG != 0)
     {
     }
 
-    // 8位发送数据左对齐
-    SpiaRegs.SPITXBUF = (tx & 0x00FF) << 8;
+    // 16位模式直接写入完整数据，不需要左移
+    SpiaRegs.SPITXBUF = tx;
 
     // 等待这一份数据收发完成
     // 实际项目可加入超时处理
@@ -112,12 +96,12 @@ Uint16 SPI_Transfer8(Uint16 tx)
     {
     }
 
-    // 接收数据右对齐，读取后清除完成标志
-    return SpiaRegs.SPIRXBUF & 0x00FF;
+    // 读取完整的16位接收数据，同时清除完成标志
+    return SpiaRegs.SPIRXBUF;
 }
 
 // 返回1：完成；返回0：数量不合法
-Uint16 SPI_FIFO_Transfer8(const Uint16 *tx, Uint16 *rx, Uint16 count)
+Uint16 SPI_FIFO_Transfer16(const Uint16 *tx, Uint16 *rx, Uint16 count)
 {
     Uint16 i;
 
@@ -134,8 +118,8 @@ Uint16 SPI_FIFO_Transfer8(const Uint16 *tx, Uint16 *rx, Uint16 count)
         {
         }
 
-        // 8位发送仍然需要左对齐
-        SpiaRegs.SPITXBUF = (tx[i] & 0x00FF) << 8;
+        // 16位模式直接写入完整数据
+        SpiaRegs.SPITXBUF = tx[i];
     }
 
     //按接收顺序取出相同数量的数据
@@ -146,8 +130,8 @@ Uint16 SPI_FIFO_Transfer8(const Uint16 *tx, Uint16 *rx, Uint16 count)
         {
         }
 
-        // 接收仍然是右对齐
-        rx[i] = SpiaRegs.SPIRXBUF & 0x00FF;
+        // 读取完整的16位接收数据
+        rx[i] = SpiaRegs.SPIRXBUF;
     }
 
     SpiaRegs.SPIFFRX.bit.RXFFINTCLR = 1;

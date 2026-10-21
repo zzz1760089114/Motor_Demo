@@ -44,9 +44,9 @@ void main(void)
 	Tx_data[1] = 30;
 	Tx_data[2] = 40;
 	Tx_data[3] = 50;
-	//Rx_Data = SPI_Transfer8(Tx_Data);
-	SPI_FIFO_Transfer8(&Tx_Data, &Rx_Data, 1);
-	SPI_FIFO_Transfer8(Tx_data, Rx_data, 4);
+	//Rx_Data = SPI_Transfer16(Tx_Data);
+	SPI_FIFO_Transfer16(&Tx_Data, &Rx_Data, 1);
+	SPI_FIFO_Transfer16(Tx_data, Rx_data, 4);
 
 	while(1)
 	{
