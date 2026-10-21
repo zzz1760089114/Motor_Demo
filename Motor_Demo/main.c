@@ -19,7 +19,8 @@ void main(void)
 	//int i=0;
 	Uint16 Tx_Data = 0;
 	Uint16 Rx_Data = 0;
-	//char str[40];
+	Uint16 Tx_data[4];
+	Uint16 Rx_data[4];
 
 	float ADC_Vol;
 
@@ -36,17 +37,27 @@ void main(void)
 	Timer0_Init(150, 100000);
 	ADC_Init();
 	LCD9648_Init();
-	SPIA_Init();
+	SPIA_FIFO_Init();
 
-	Tx_Data = 30;
-	Rx_Data = SPI_Transfer8(Tx_Data);
+	Tx_Data = 20;
+	Tx_data[0] = 20;
+	Tx_data[1] = 30;
+	Tx_data[2] = 40;
+	Tx_data[3] = 50;
+	//Rx_Data = SPI_Transfer8(Tx_Data);
+	SPI_FIFO_Transfer8(&Tx_Data, &Rx_Data, 1);
+	SPI_FIFO_Transfer8(Tx_data, Rx_data, 4);
 
 	while(1)
 	{
 		ADC_Vol = (float)Read_ADC_Value()*3.0/4095;
 		LCD9648_ShowString(0U, 0U, "Motor Demo");
-		LCD9648_ShowString(0U, 2U, "Voltage:");
-		LCD9648_ShowDecimal(48U, 2U, ADC_Vol, 1U, 2U);
-		LCD9648_ShowNumber(0U, 4U, Rx_Data, 10U);
+		LCD9648_ShowString(0U, 1U, "Voltage:");
+		LCD9648_ShowDecimal(48U, 1U, ADC_Vol, 1U, 2U);
+		LCD9648_ShowNumber(0U, 2U, Rx_Data, 8U);
+		LCD9648_ShowNumber(0U, 3U, Rx_data[0], 2U);
+		LCD9648_ShowNumber(18U, 3U, Rx_data[1], 2U);
+		LCD9648_ShowNumber(36U, 3U, Rx_data[2], 2U);
+		LCD9648_ShowNumber(54U, 3U, Rx_data[3], 2U);
 	}
 }
