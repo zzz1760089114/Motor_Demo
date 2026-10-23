@@ -13,7 +13,8 @@ C_SRCS += \
 ../Include/APP/APP_common/Led.c \
 ../Include/APP/APP_common/Relay.c \
 ../Include/APP/APP_common/SPI.c \
-../Include/APP/APP_common/Timer0.c 
+../Include/APP/APP_common/Timer.c \
+../Include/APP/APP_common/ePWM.c 
 
 C_DEPS += \
 ./Include/APP/APP_common/ADC.d \
@@ -23,7 +24,8 @@ C_DEPS += \
 ./Include/APP/APP_common/Led.d \
 ./Include/APP/APP_common/Relay.d \
 ./Include/APP/APP_common/SPI.d \
-./Include/APP/APP_common/Timer0.d 
+./Include/APP/APP_common/Timer.d \
+./Include/APP/APP_common/ePWM.d 
 
 OBJS += \
 ./Include/APP/APP_common/ADC.obj \
@@ -33,7 +35,8 @@ OBJS += \
 ./Include/APP/APP_common/Led.obj \
 ./Include/APP/APP_common/Relay.obj \
 ./Include/APP/APP_common/SPI.obj \
-./Include/APP/APP_common/Timer0.obj 
+./Include/APP/APP_common/Timer.obj \
+./Include/APP/APP_common/ePWM.obj 
 
 OBJS__QUOTED += \
 "Include\APP\APP_common\ADC.obj" \
@@ -43,7 +46,8 @@ OBJS__QUOTED += \
 "Include\APP\APP_common\Led.obj" \
 "Include\APP\APP_common\Relay.obj" \
 "Include\APP\APP_common\SPI.obj" \
-"Include\APP\APP_common\Timer0.obj" 
+"Include\APP\APP_common\Timer.obj" \
+"Include\APP\APP_common\ePWM.obj" 
 
 C_DEPS__QUOTED += \
 "Include\APP\APP_common\ADC.d" \
@@ -53,7 +57,8 @@ C_DEPS__QUOTED += \
 "Include\APP\APP_common\Led.d" \
 "Include\APP\APP_common\Relay.d" \
 "Include\APP\APP_common\SPI.d" \
-"Include\APP\APP_common\Timer0.d" 
+"Include\APP\APP_common\Timer.d" \
+"Include\APP\APP_common\ePWM.d" 
 
 C_SRCS__QUOTED += \
 "../Include/APP/APP_common/ADC.c" \
@@ -63,6 +68,7 @@ C_SRCS__QUOTED += \
 "../Include/APP/APP_common/Led.c" \
 "../Include/APP/APP_common/Relay.c" \
 "../Include/APP/APP_common/SPI.c" \
-"../Include/APP/APP_common/Timer0.c" 
+"../Include/APP/APP_common/Timer.c" \
+"../Include/APP/APP_common/ePWM.c" 
 
 
