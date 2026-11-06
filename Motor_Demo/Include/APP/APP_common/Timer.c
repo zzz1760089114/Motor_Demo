@@ -2,6 +2,7 @@
 #include "Led.h"
 #include "LCD9648.h"
 #include "SPI.h"
+#include "Exti.h"
 
 void Timer0_Init(float Freq, float Period)
 {
@@ -103,4 +104,6 @@ interrupt void Timer1_TRQn(void)
 	LCD9648_ShowNumber(18U, 3U, Rx_data[1], 2U);
 	LCD9648_ShowNumber(36U, 3U, Rx_data[2], 2U);
 	LCD9648_ShowNumber(54U, 3U, Rx_data[3], 2U);
+    LCD9648_ShowString(0U, 4U, "Key_Count:");
+    LCD9648_ShowNumber(60U, 4U, Key_Count, 6U);
 }

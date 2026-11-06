@@ -29,6 +29,7 @@ Include/APP/APP_common/Exti.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_commo
 Include/APP/APP_common/Exti.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_DefaultIsr.h
 Include/APP/APP_common/Exti.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Relay.h
 Include/APP/APP_common/Exti.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Led.h
+Include/APP/APP_common/Exti.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SCI.h
 
 ../Include/APP/APP_common/Exti.c:
 
@@ -87,4 +88,6 @@ E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_DefaultIsr.h:
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Relay.h:
 
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Led.h:
+
+E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SCI.h:
 

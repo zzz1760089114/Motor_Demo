@@ -13,7 +13,7 @@ void SPIA_EnableFIFO_Init(void)
 
     SpiaRegs.SPICCR.bit.SPICHAR = 15;     // 每个数据单元16位
     SpiaRegs.SPICCR.bit.CLKPOLARITY = 0;   // 时钟空闲低
-    SpiaRegs.SPICCR.bit.SPILBK = 1;        // 内部回环测试
+    SpiaRegs.SPICCR.bit.SPILBK = 1;        // 内部回环测试,自己发送/自己接收
 
     SpiaRegs.SPICTL.bit.MASTER_SLAVE = 1;  // 主机
     SpiaRegs.SPICTL.bit.TALK = 1;          // 允许发送
@@ -22,6 +22,7 @@ void SPIA_EnableFIFO_Init(void)
     SpiaRegs.SPIBRR = 37;                   //SPI波特率
    
     SpiaRegs.SPIFFTX.bit.SPIFFENA = 0;      // 关闭 FIFO 增强功能 
+    SpiaRegs.SPIFFCT.all = 0;
 
     SpiaRegs.SPIPRI.bit.FREE = 1;           // 调试器暂停时允许 SPI 继续运行
 
@@ -79,7 +80,7 @@ void SPIA_FIFO_Init(void)
     SpiaRegs.SPICCR.bit.SPISWRESET = 1;
 }
 
-
+// 内部发送接收
 Uint16 SPI_Transfer16(Uint16 tx)
 {
     // 等待发送缓冲区有空位
@@ -100,7 +101,7 @@ Uint16 SPI_Transfer16(Uint16 tx)
     return SpiaRegs.SPIRXBUF;
 }
 
-// 返回1：完成；返回0：数量不合法
+// 返回1：完成；返回0：数量不合法  内部发送接收
 Uint16 SPI_FIFO_Transfer16(const Uint16 *tx, Uint16 *rx, Uint16 count)
 {
     Uint16 i;

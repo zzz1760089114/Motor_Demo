@@ -34,6 +34,7 @@ main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/ADC.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/LCD9648.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SPI.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/ePWM.h
+main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SCI.h
 
 ../main.c:
 
@@ -102,4 +103,6 @@ E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/LCD9648.h:
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SPI.h:
 
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/ePWM.h:
+
+E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SCI.h:
 

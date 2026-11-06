@@ -1,6 +1,16 @@
 #include "Exti.h"
 #include "Relay.h"
 #include "Led.h"
+#include "SCI.h"
+
+#define KEY1_DEBOUNCE_SAMPLES    2U
+#define KEY1_STATE_IDLE          0U
+#define KEY1_STATE_PRESS_CHECK   1U
+#define KEY1_STATE_WAIT_RELEASE  2U
+
+static volatile Uint16 key1State;
+static volatile Uint16 key1StableCount;
+volatile Uint16 Key_Count;
 
 void EXTI1_Init(void)
 {
@@ -21,9 +31,9 @@ void EXTI1_Init(void)
     GpioCtrlRegs.GPBPUD.bit.GPIO48 = 0;
     GpioDataRegs.GPBCLEAR.bit.GPIO48 = 1;
     EDIS;
-    
+
     EALLOW;
-    GpioIntRegs.GPIOXINT1SEL.bit.GPIOSEL = 12;  //GPIO12 选择为外部中断 XINT1 的输入源
+    GpioIntRegs.GPIOXINT1SEL.bit.GPIOSEL = 12;
     EDIS;
 
     EALLOW;
@@ -32,9 +42,14 @@ void EXTI1_Init(void)
 
     PieCtrlRegs.PIEIER1.bit.INTx4 = 1;
     
+    // 初始化按键状态机
+    key1State = KEY1_STATE_IDLE;
+    key1StableCount = 0U;
+    Key_Count = 0U;
+
     XIntruptRegs.XINT1CR.bit.POLARITY = 0;
     XIntruptRegs.XINT1CR.bit.ENABLE = 1;
-    
+
     IER |= M_INT1;
     EINT;
     ERTM;
@@ -42,9 +57,50 @@ void EXTI1_Init(void)
 
 interrupt void EXTI1_IRQn(void)
 {
-	Uint32 i;
-	for(i=0;i<10000;i++);    //键盘消抖动
-	while(!KEY_H1);
-	Led1_Toggle;
-	PieCtrlRegs.PIEACK.bit.ACK1=1;
+    XIntruptRegs.XINT1CR.bit.ENABLE = 0;
+    key1StableCount = 0U;
+    key1State = KEY1_STATE_PRESS_CHECK;
+    PieCtrlRegs.PIEACK.bit.ACK1 = 1;
+}
+
+void KEY1_DebounceTask(void)
+{
+    if (key1State == KEY1_STATE_PRESS_CHECK)
+    {
+        if (KEY_H1 == 0U)
+        {
+            key1StableCount++;
+            if (key1StableCount >= KEY1_DEBOUNCE_SAMPLES)
+            {
+                Key_Count++;
+                Led1_Toggle;
+                SCI_Transfer16(Key_Count);
+                key1StableCount = 0U;
+                key1State = KEY1_STATE_WAIT_RELEASE;
+            }
+        }
+        else
+        {
+            key1StableCount = 0U;
+            key1State = KEY1_STATE_IDLE;
+            XIntruptRegs.XINT1CR.bit.ENABLE = 1;
+        }
+    }
+    else if (key1State == KEY1_STATE_WAIT_RELEASE)
+    {
+        if (KEY_H1 != 0U)
+        {
+            key1StableCount++;
+            if (key1StableCount >= KEY1_DEBOUNCE_SAMPLES)
+            {
+                key1StableCount = 0U;
+                key1State = KEY1_STATE_IDLE;
+                XIntruptRegs.XINT1CR.bit.ENABLE = 1;
+            }
+        }
+        else
+        {
+            key1StableCount = 0U;
+        }
+    }
 }

@@ -30,6 +30,7 @@ Include/APP/APP_common/Timer.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_comm
 Include/APP/APP_common/Timer.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Led.h
 Include/APP/APP_common/Timer.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/LCD9648.h
 Include/APP/APP_common/Timer.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SPI.h
+Include/APP/APP_common/Timer.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Exti.h
 
 ../Include/APP/APP_common/Timer.c:
 
@@ -90,4 +91,6 @@ E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Led.h:
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/LCD9648.h:
 
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SPI.h:
+
+E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Exti.h:
 

@@ -14,6 +14,7 @@
 #include "LCD9648.h"
 #include "SPI.h"
 #include "ePWM.h"
+#include "SCI.h"
 
 void main(void)
 {
@@ -28,7 +29,6 @@ void main(void)
 	InitPieVectTable();
 
 	Relay_Init();
-    //EXTI1_Init();
 	Led_Init();
 	ADC_Init();
 	LCD9648_Init();
@@ -36,6 +36,8 @@ void main(void)
 	ePWM6_Init(500);
 	Timer0_Init(150, 100000);
 	Timer1_Init(150, 100000);
+	SCIA_EnableFIFO_Init(4800);
+	EXTI1_Init();
 
 	while(1)
 	{
@@ -57,6 +59,7 @@ void main(void)
 		}
 		ePwm6A_SetCompare(i); //i值最大可以取499，因为ARR最大值是499.
 		ePwm6B_SetCompare(300-i); //i值最大可以取499，因为ARR最大值是499.
+		KEY1_DebounceTask();
 		DELAY_US(10*1000);
 	}
 }

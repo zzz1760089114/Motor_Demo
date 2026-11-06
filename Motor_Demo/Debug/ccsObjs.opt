@@ -20,6 +20,7 @@
 "./Include/APP/APP_common/LCD9648.obj"
 "./Include/APP/APP_common/Led.obj"
 "./Include/APP/APP_common/Relay.obj"
+"./Include/APP/APP_common/SCI.obj"
 "./Include/APP/APP_common/SPI.obj"
 "./Include/APP/APP_common/Timer.obj"
 "./Include/APP/APP_common/ePWM.obj"
