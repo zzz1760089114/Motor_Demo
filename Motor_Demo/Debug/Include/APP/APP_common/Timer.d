@@ -31,6 +31,8 @@ Include/APP/APP_common/Timer.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_heade
 Include/APP/APP_common/Timer.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/LCD9648.h
 Include/APP/APP_common/Timer.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SPI.h
 Include/APP/APP_common/Timer.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Exti.h
+Include/APP/APP_common/Timer.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SCI.h
+Include/APP/APP_common/Timer.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/ADC.h
 
 ../Include/APP/APP_common/Timer.c:
 
@@ -93,4 +95,8 @@ E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/LCD9648.h:
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SPI.h:
 
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Exti.h:
+
+E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SCI.h:
+
+E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/ADC.h:
 

@@ -33,10 +33,10 @@ void main(void)
 	ADC_Init();
 	LCD9648_Init();
 	SPIA_FIFO_Init();
+	SCIA_FIFO_Init(4800);
 	ePWM6_Init(500);
 	Timer0_Init(150, 100000);
 	Timer1_Init(150, 100000);
-	SCIA_EnableFIFO_Init(4800);
 	EXTI1_Init();
 
 	while(1)

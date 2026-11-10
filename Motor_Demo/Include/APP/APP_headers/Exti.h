@@ -6,7 +6,8 @@
 
 #define KEY_H1			(GpioDataRegs.GPADAT.bit.GPIO12)
 
-extern volatile Uint16 Key_Count;
+extern volatile Uint16 Key_Tx_Count;
+extern volatile Uint16 Key_Rx_Count;
 
 void EXTI1_Init(void);
 void KEY1_DebounceTask(void);

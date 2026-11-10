@@ -3,6 +3,8 @@
 #include "LCD9648.h"
 #include "SPI.h"
 #include "Exti.h"
+#include "SCI.h"
+#include "ADC.h"
 
 void Timer0_Init(float Freq, float Period)
 {
@@ -89,21 +91,30 @@ interrupt void Timer1_TRQn(void)
 	Tx_data[0] = 20;
 	Tx_data[1] = 30;
 	Tx_data[2] = 40;
-	Tx_data[3] = 50;
-	SPI_FIFO_Transfer16(&Tx_Data, &Rx_Data, 1);
+	Tx_data[3] = 50; 
+    
+    SPI_FIFO_Transfer16(&Tx_Data, &Rx_Data, 1);
 	SPI_FIFO_Transfer16(Tx_data, Rx_data, 4);
+    SCI_FIFO_Transfer16(&Tx_Data, &Rx_Data, 1);
+    SCI_FIFO_Transfer16(Tx_data, Rx_data, 4);
 
     ADC_Vol = (float)Read_ADC_Value()*3.0/4095;
     LCD9648_ShowString(0U, 0U, "Motor Demo");
-	LCD9648_ShowString(0U, 1U, "Voltage:");
-	LCD9648_ShowString(0U, 0U, "Motor Demo");
-	LCD9648_ShowString(0U, 1U, "Voltage:");
+	
+    LCD9648_ShowString(0U, 1U, "Voltage:");
 	LCD9648_ShowDecimal(48U, 1U, ADC_Vol, 1U, 2U);
-	LCD9648_ShowNumber(0U, 2U, Rx_Data, 8U);
+	
+    LCD9648_ShowNumber(0U, 2U, Rx_Data, 8U);
 	LCD9648_ShowNumber(0U, 3U, Rx_data[0], 2U);
 	LCD9648_ShowNumber(18U, 3U, Rx_data[1], 2U);
 	LCD9648_ShowNumber(36U, 3U, Rx_data[2], 2U);
 	LCD9648_ShowNumber(54U, 3U, Rx_data[3], 2U);
+    
     LCD9648_ShowString(0U, 4U, "Key_Count:");
-    LCD9648_ShowNumber(60U, 4U, Key_Count, 6U);
+    LCD9648_ShowNumber(60U, 4U, Key_Rx_Count, 6U);
+    LCD9648_ShowNumber(0U, 5U, Rx_data[0], 2U);
+	LCD9648_ShowNumber(18U, 5U, Rx_data[1], 2U);
+	LCD9648_ShowNumber(36U, 5U, Rx_data[2], 2U);
+	LCD9648_ShowNumber(54U, 5U, Rx_data[3], 2U);
+
 }

@@ -10,7 +10,8 @@
 
 static volatile Uint16 key1State;
 static volatile Uint16 key1StableCount;
-volatile Uint16 Key_Count;
+volatile Uint16 Key_Tx_Count;
+volatile Uint16 Key_Rx_Count;
 
 void EXTI1_Init(void)
 {
@@ -45,7 +46,8 @@ void EXTI1_Init(void)
     // 初始化按键状态机
     key1State = KEY1_STATE_IDLE;
     key1StableCount = 0U;
-    Key_Count = 0U;
+    Key_Tx_Count = 0U;
+    Key_Rx_Count = 0U;
 
     XIntruptRegs.XINT1CR.bit.POLARITY = 0;
     XIntruptRegs.XINT1CR.bit.ENABLE = 1;
@@ -65,6 +67,9 @@ interrupt void EXTI1_IRQn(void)
 
 void KEY1_DebounceTask(void)
 {
+    Uint16 txCount;
+    Uint16 rxCount;
+
     if (key1State == KEY1_STATE_PRESS_CHECK)
     {
         if (KEY_H1 == 0U)
@@ -72,9 +77,14 @@ void KEY1_DebounceTask(void)
             key1StableCount++;
             if (key1StableCount >= KEY1_DEBOUNCE_SAMPLES)
             {
-                Key_Count++;
+                Key_Tx_Count++;
                 Led1_Toggle;
-                SCI_Transfer16(Key_Count);
+                txCount = Key_Tx_Count;
+                if (SCI_FIFO_Transfer16(&txCount, &rxCount, 1U) != 0U)
+                {
+                    /* 完整接收后再更新共享变量 */
+                    Key_Rx_Count = rxCount;
+                }
                 key1StableCount = 0U;
                 key1State = KEY1_STATE_WAIT_RELEASE;
             }

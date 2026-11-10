@@ -57,7 +57,7 @@ void SPIA_FIFO_Init(void)
     SpiaRegs.SPIFFRX.all = 0;
     SpiaRegs.SPIFFCT.all = 0;              // 无附加发送延迟
 
-    //启用FIFO，采用轮询
+    //启用FIFO
     SpiaRegs.SPIFFTX.bit.SPIFFENA = 1;
 
     SpiaRegs.SPIFFTX.bit.TXFFIENA = 0;     // 不开TX FIFO中断
