@@ -1,7 +1,8 @@
 #ifndef FONT_H_
 #define FONT_H_
 
-#include "DSP2833x_Device.h"
+#include "DSP2833x_Device.h"     // DSP2833x Headerfile Include File
+#include "DSP2833x_Examples.h"   // DSP2833x Examples Include File
 
 #define LCD9648_ASCII_FIRST_CHAR  32U
 #define LCD9648_ASCII_LAST_CHAR   126U

@@ -7,14 +7,16 @@
 #include "DSP2833x_Device.h"     // DSP2833x Headerfile Include File
 #include "DSP2833x_Examples.h"   // DSP2833x Examples Include File
 #include "Relay.h"
-#include "Exti.h"
 #include "Led.h"
+#include "Key.h"
 #include "Timer.h"
 #include "ADC.h"
 #include "LCD9648.h"
 #include "SPI.h"
 #include "ePWM.h"
 #include "SCI.h"
+#include "IIC.h"
+//#include "Exti.h"
 
 void main(void)
 {
@@ -30,6 +32,7 @@ void main(void)
 
 	Relay_Init();
 	Led_Init();
+	KEY_Matrix_Init();
 	ADC_Init();
 	LCD9648_Init();
 	SPIA_FIFO_Init();
@@ -37,7 +40,18 @@ void main(void)
 	ePWM6_Init(500);
 	Timer0_Init(150, 100000);
 	Timer1_Init(150, 100000);
-	EXTI1_Init();
+	IIC_Init();
+
+	while (AT24CXX_Check())
+	{
+		SCI_FIFO_SendString("ATC4C02 Detection is Abnormal!\r\n");
+		DELAY_US(1000);
+		Clear_FIFO();
+		DELAY_US(500*1000);
+	}
+	SCI_FIFO_SendString("ATC4C02 Detection is Normal!\r\n");
+	DELAY_US(1000);
+	Clear_FIFO();
 
 	while(1)
 	{
@@ -59,7 +73,8 @@ void main(void)
 		}
 		ePwm6A_SetCompare(i); //i值最大可以取499，因为ARR最大值是499.
 		ePwm6B_SetCompare(300-i); //i值最大可以取499，因为ARR最大值是499.
-		KEY1_DebounceTask();
+		KEY_Matrix_ScanTask();
+		KEY_ProcessEvent();
 		DELAY_US(10*1000);
 	}
 }

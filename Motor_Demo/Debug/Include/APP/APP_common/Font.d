@@ -21,6 +21,12 @@ Include/APP/APP_common/Font.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_heade
 Include/APP/APP_common/Font.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers/DSP2833x_SysCtrl.h
 Include/APP/APP_common/Font.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers/DSP2833x_XIntrupt.h
 Include/APP/APP_common/Font.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers/DSP2833x_Xintf.h
+Include/APP/APP_common/Font.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_Examples.h
+Include/APP/APP_common/Font.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_GlobalPrototypes.h
+Include/APP/APP_common/Font.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_EPwm_defines.h
+Include/APP/APP_common/Font.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_Dma_defines.h
+Include/APP/APP_common/Font.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_I2c_defines.h
+Include/APP/APP_common/Font.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_DefaultIsr.h
 
 ../Include/APP/APP_common/Font.c:
 
@@ -63,4 +69,16 @@ E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers/DSP2833x_SysCtrl.h:
 E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers/DSP2833x_XIntrupt.h:
 
 E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers/DSP2833x_Xintf.h:
+
+E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_Examples.h:
+
+E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_GlobalPrototypes.h:
+
+E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_EPwm_defines.h:
+
+E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_Dma_defines.h:
+
+E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_I2c_defines.h:
+
+E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_DefaultIsr.h:
 

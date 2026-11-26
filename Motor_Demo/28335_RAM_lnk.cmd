@@ -125,10 +125,10 @@ SECTIONS
    .TI.ramfunc : {} > RAML0,      PAGE = 0
    ramfuncs    : > RAML0,         PAGE = 0  
    
-   .text            : > RAML1,     PAGE = 0
-   .cinit           : > RAML0,     PAGE = 0
-   .pinit           : > RAML0,     PAGE = 0
-   .switch          : > RAML0,     PAGE = 0
+   .text            : >> RAML1 | RAML2 | RAML3,        PAGE = 0
+   .cinit           : >  RAML0,                        PAGE = 0
+   .pinit           : >  RAML0,                        PAGE = 0
+   .switch          : >  RAML0,                        PAGE = 0
 
    .stack           : > RAMM1,     PAGE = 1
    .ebss            : > RAML4,     PAGE = 1

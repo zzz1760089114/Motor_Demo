@@ -27,14 +27,15 @@ main.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_Dma_defines.
 main.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_I2c_defines.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_DefaultIsr.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Relay.h
-main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Exti.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Led.h
+main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Key.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Timer.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/ADC.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/LCD9648.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SPI.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/ePWM.h
 main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SCI.h
+main.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/IIC.h
 
 ../main.c:
 
@@ -90,9 +91,9 @@ E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_DefaultIsr.h:
 
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Relay.h:
 
-E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Exti.h:
-
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Led.h:
+
+E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Key.h:
 
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Timer.h:
 
@@ -105,4 +106,6 @@ E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SPI.h:
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/ePWM.h:
 
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SCI.h:
+
+E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/IIC.h:
 

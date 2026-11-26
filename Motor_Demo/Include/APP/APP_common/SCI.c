@@ -30,7 +30,7 @@ void SCIA_EnableFIFO_Init(Uint32 baud)
 
     SciaRegs.SCICCR.bit.SCICHAR = 7;
     SciaRegs.SCICCR.bit.ADDRIDLE_MODE = 0;
-    SciaRegs.SCICCR.bit.LOOPBKENA = 1;
+    SciaRegs.SCICCR.bit.LOOPBKENA = 1;      //SCI内部自回环,自己发送自己接收
     SciaRegs.SCICCR.bit.PARITYENA = 0;
     SciaRegs.SCICCR.bit.STOPBITS = 0;
 
@@ -159,6 +159,7 @@ void SCIA_FIFO_Init(Uint32 baud)
     SciaRegs.SCICTL1.bit.SWRESET = 1;
 }
 
+//连续传递数字，即数组
 Uint16 SCI_FIFO_Transfer16(const Uint16 *tx, Uint16 *rx, Uint16 count)
 {
     Uint16 i;
@@ -196,4 +197,47 @@ Uint16 SCI_FIFO_Transfer16(const Uint16 *tx, Uint16 *rx, Uint16 count)
     SciaRegs.SCIFFRX.bit.RXFFOVRCLR = 1;
 
     return 1;
+}
+
+//传递字符，可用于向上位机传递信息
+Uint16 SCI_FIFO_SendString(const char *str)
+{
+    if (str == 0)
+    {
+        return 0U;
+    }
+
+    while (*str != '\0')
+    {
+        /* FIFO深度为16，满了就等待 */
+        while (SciaRegs.SCIFFTX.bit.TXFFST >= 16U)
+        {
+        }
+
+        /* SCI为8位模式，只发送字符低8位 */
+        SciaRegs.SCITXBUF = ((Uint16)(*str)) & 0x00FFU;
+
+        str++;
+    }
+
+    /* 等待FIFO中的字符全部发出 */
+    while (SciaRegs.SCIFFTX.bit.TXFFST != 0U)
+    {
+    }
+
+    /* 等待移位寄存器发送完成 */
+    while (SciaRegs.SCICTL2.bit.TXEMPTY == 0U)
+    {
+    }
+
+    return 1U;
+}
+
+void Clear_FIFO(void)
+{
+    /* 清空启动提示产生的自回环接收数据 */
+    SciaRegs.SCIFFRX.bit.RXFIFORESET = 0;
+    SciaRegs.SCIFFRX.bit.RXFFOVRCLR = 1;
+    SciaRegs.SCIFFRX.bit.RXFFINTCLR = 1;
+    SciaRegs.SCIFFRX.bit.RXFIFORESET = 1;
 }

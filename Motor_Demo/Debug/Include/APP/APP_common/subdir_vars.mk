@@ -9,6 +9,8 @@ C_SRCS += \
 ../Include/APP/APP_common/ADC.c \
 ../Include/APP/APP_common/Exti.c \
 ../Include/APP/APP_common/Font.c \
+../Include/APP/APP_common/IIC.c \
+../Include/APP/APP_common/Key.c \
 ../Include/APP/APP_common/LCD9648.c \
 ../Include/APP/APP_common/Led.c \
 ../Include/APP/APP_common/Relay.c \
@@ -21,6 +23,8 @@ C_DEPS += \
 ./Include/APP/APP_common/ADC.d \
 ./Include/APP/APP_common/Exti.d \
 ./Include/APP/APP_common/Font.d \
+./Include/APP/APP_common/IIC.d \
+./Include/APP/APP_common/Key.d \
 ./Include/APP/APP_common/LCD9648.d \
 ./Include/APP/APP_common/Led.d \
 ./Include/APP/APP_common/Relay.d \
@@ -33,6 +37,8 @@ OBJS += \
 ./Include/APP/APP_common/ADC.obj \
 ./Include/APP/APP_common/Exti.obj \
 ./Include/APP/APP_common/Font.obj \
+./Include/APP/APP_common/IIC.obj \
+./Include/APP/APP_common/Key.obj \
 ./Include/APP/APP_common/LCD9648.obj \
 ./Include/APP/APP_common/Led.obj \
 ./Include/APP/APP_common/Relay.obj \
@@ -45,6 +51,8 @@ OBJS__QUOTED += \
 "Include\APP\APP_common\ADC.obj" \
 "Include\APP\APP_common\Exti.obj" \
 "Include\APP\APP_common\Font.obj" \
+"Include\APP\APP_common\IIC.obj" \
+"Include\APP\APP_common\Key.obj" \
 "Include\APP\APP_common\LCD9648.obj" \
 "Include\APP\APP_common\Led.obj" \
 "Include\APP\APP_common\Relay.obj" \
@@ -57,6 +65,8 @@ C_DEPS__QUOTED += \
 "Include\APP\APP_common\ADC.d" \
 "Include\APP\APP_common\Exti.d" \
 "Include\APP\APP_common\Font.d" \
+"Include\APP\APP_common\IIC.d" \
+"Include\APP\APP_common\Key.d" \
 "Include\APP\APP_common\LCD9648.d" \
 "Include\APP\APP_common\Led.d" \
 "Include\APP\APP_common\Relay.d" \
@@ -69,6 +79,8 @@ C_SRCS__QUOTED += \
 "../Include/APP/APP_common/ADC.c" \
 "../Include/APP/APP_common/Exti.c" \
 "../Include/APP/APP_common/Font.c" \
+"../Include/APP/APP_common/IIC.c" \
+"../Include/APP/APP_common/Key.c" \
 "../Include/APP/APP_common/LCD9648.c" \
 "../Include/APP/APP_common/Led.c" \
 "../Include/APP/APP_common/Relay.c" \

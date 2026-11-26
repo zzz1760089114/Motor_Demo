@@ -10,5 +10,7 @@ void SCI_A_SendChar(Uint16 data);
 Uint16 SCI_A_ReadChar(void);
 Uint16 SCI_Transfer16(Uint16 tx);
 Uint16 SCI_FIFO_Transfer16(const Uint16 *tx, Uint16 *rx, Uint16 count);
+Uint16 SCI_FIFO_SendString(const char *str);
+void Clear_FIFO(void);
 
 #endif

@@ -1,0 +1,16 @@
+
+**** Build of configuration 'Debug' for project 'Motor_Demo' ****
+
+"C:\\ti\\ccs2100\\ccs\\utils\\bin\\gmake" -k -j 20 all -r -O 
+ 
+C2000 Compiler - building file: "../Include/APP/APP_common/Key.c"
+"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/bin/cl2000" -v28 -ml -mt --float_support=fpu32 --include_path="E:/Motor_Demo/Motor_Demo" --include_path="C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include" --include_path="E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers" --include_path="E:/Motor_Demo/Motor_Demo/Include/DSP2833x_headers" --include_path="E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common" -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi --preproc_with_compile --preproc_dependency="Include/APP/APP_common/Key.d_raw" --obj_directory="Include/APP/APP_common"  "../Include/APP/APP_common/Key.c"
+Finished building: "../Include/APP/APP_common/Key.c"
+ 
+C2000 Linker - building target: "Motor_Demo.out"
+"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/bin/cl2000" -v28 -ml -mt --float_support=fpu32 -g --diag_warning=225 --diag_wrap=off --display_error_number --abi=coffabi -z -m"Motor_Demo.map" --stack_size=0x300 --warn_sections -i"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/lib" -i"C:/ti/ccs2100/ccs/tools/compiler/ti-cgt-c2000_25.11.1.LTS/include" --reread_libs --diag_wrap=off --display_error_number --xml_link_info="Motor_Demo_linkInfo.xml" --rom_model -o "Motor_Demo.out" "./main.obj" "./DSP2833x_libraries/DSP2833x_ADC_cal.obj" "./DSP2833x_libraries/DSP2833x_Adc.obj" "./DSP2833x_libraries/DSP2833x_CodeStartBranch.obj" "./DSP2833x_libraries/DSP2833x_CpuTimers.obj" "./DSP2833x_libraries/DSP2833x_DefaultIsr.obj" "./DSP2833x_libraries/DSP2833x_EPwm.obj" "./DSP2833x_libraries/DSP2833x_GlobalVariableDefs.obj" "./DSP2833x_libraries/DSP2833x_Gpio.obj" "./DSP2833x_libraries/DSP2833x_PieCtrl.obj" "./DSP2833x_libraries/DSP2833x_PieVect.obj" "./DSP2833x_libraries/DSP2833x_Sci.obj" "./DSP2833x_libraries/DSP2833x_Spi.obj" "./DSP2833x_libraries/DSP2833x_SysCtrl.obj" "./DSP2833x_libraries/DSP2833x_Xintf.obj" "./DSP2833x_libraries/DSP2833x_usDelay.obj" "./Include/APP/APP_common/ADC.obj" "./Include/APP/APP_common/Exti.obj" "./Include/APP/APP_common/Font.obj" "./Include/APP/APP_common/IIC.obj" "./Include/APP/APP_common/Key.obj" "./Include/APP/APP_common/LCD9648.obj" "./Include/APP/APP_common/Led.obj" "./Include/APP/APP_common/Relay.obj" "./Include/APP/APP_common/SCI.obj" "./Include/APP/APP_common/SPI.obj" "./Include/APP/APP_common/Timer.obj" "./Include/APP/APP_common/ePWM.obj" "../28335_RAM_lnk.cmd" "../DSP2833x_libraries/DSP2833x_Headers_nonBIOS.cmd" "../DSP2833x_libraries/IQmath_fpu32.lib"  -llibc.a 
+<Linking>
+Finished building target: "Motor_Demo.out"
+ 
+**** Build finished ****
+

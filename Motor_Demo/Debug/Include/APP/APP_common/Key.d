@@ -27,8 +27,9 @@ Include/APP/APP_common/Key.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common
 Include/APP/APP_common/Key.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_Dma_defines.h
 Include/APP/APP_common/Key.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_I2c_defines.h
 Include/APP/APP_common/Key.obj: E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_DefaultIsr.h
-Include/APP/APP_common/Key.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Relay.h
 Include/APP/APP_common/Key.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Led.h
+Include/APP/APP_common/Key.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SCI.h
+Include/APP/APP_common/Key.obj: E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/IIC.h
 
 ../Include/APP/APP_common/Key.c:
 
@@ -84,7 +85,9 @@ E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_I2c_defines.h:
 
 E:/Motor_Demo/Motor_Demo/Include/DSP2833x_common/DSP2833x_DefaultIsr.h:
 
-E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Relay.h:
-
 E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/Led.h:
+
+E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/SCI.h:
+
+E:/Motor_Demo/Motor_Demo/Include/APP/APP_headers/IIC.h:
 

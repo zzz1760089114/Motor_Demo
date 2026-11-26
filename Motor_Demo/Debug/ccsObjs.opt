@@ -17,6 +17,8 @@
 "./Include/APP/APP_common/ADC.obj"
 "./Include/APP/APP_common/Exti.obj"
 "./Include/APP/APP_common/Font.obj"
+"./Include/APP/APP_common/IIC.obj"
+"./Include/APP/APP_common/Key.obj"
 "./Include/APP/APP_common/LCD9648.obj"
 "./Include/APP/APP_common/Led.obj"
 "./Include/APP/APP_common/Relay.obj"
